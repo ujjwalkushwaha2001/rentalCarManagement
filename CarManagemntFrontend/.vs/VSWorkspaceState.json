@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\rentalCar",
+    "\\rentalCar\\src",
+    "\\rentalCar\\src\\app",
+    "\\rentalCar\\src\\app\\add-new-cars",
+    "\\rentalCar\\src\\app\\admin-home",
+    "\\rentalCar\\src\\app\\admin-update-car",
+    "\\rentalCar\\src\\app\\services"
+  ],
+  "SelectedNode": "\\rentalCar\\src\\app\\admin-update-car\\admin-update-car.component.ts",
+  "PreviewInSolutionExplorer": false
+}

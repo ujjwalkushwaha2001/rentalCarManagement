@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CarManagementBackend",
+    "\\CarManagementBackend\\Controllers",
+    "\\CarManagementBackend\\Data",
+    "\\CarManagementBackend\\Migrations",
+    "\\CarManagementBackend\\Models"
+  ],
+  "SelectedNode": "\\CarManagementBackend.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,26 @@
+<nav class="nav">
+  <h1> <a routerLink="/">Car Rental Management</a></h1>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
+      <li> <a routerLink="admin-auth">Admin</a></li>
+      <li> <a routerLink="">Home</a></li>
+      <li> <a routerLink="user-auth">Login/Signup</a></li>
+    </ul>
+    <ul *ngSwitchCase="'user'">
+      <li> <a routerLink="">Home</a></li>
+      <li> <a routerLink="mybookings">MyBookings</a></li>
+      <li> <a routerLink="user-auth">{{userName |titlecase}}</a></li>
+      <li> <a (click)="userLogout()">Logout</a></li>
+    </ul>
+    <ul *ngSwitchCase="'admin'">
+      <li> <a routerLink="add-newcars">AddCars</a></li>
+      <li> <a routerLink="admin-home">CarList</a></li>
+      <li> <a routerLink="admin-booking">Bookings</a></li>
+      <li> <a (click)="logout()">Logout(admin)</a></li>
+      <!--<li> <a routerLink="admin-home">{{adminName | titlecase}}</a></li>-->
+    </ul>
+  </div>
+</nav>
+
+
+

@@ -1,0 +1,17 @@
+<div class="admin-auth">
+
+
+  <div class="user-login">
+    <h1>Admin Login</h1>
+    <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
+      <p class="error-p">{{authError}}</p>
+      <input class="form-input" type="text" placeholder="Enter user Email" name="email" ngModel #email="ngModel" required email />
+      <p class="invalid-input"><span *ngIf="email.invalid && email.touched">Please enter valid  value..</span></p>
+      <input class="form-input" type="password" placeholder="Enter Password" name="password" ngModel #password="ngModel" required minlength="5" maxlength="15" />
+      <p class="invalid-input"><span *ngIf="password.invalid && password.touched">Please enter valid  value..</span></p>
+
+      <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+
+    </form>
+  </div>
+</div>

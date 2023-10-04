@@ -1,0 +1,68 @@
+<ngb-carousel *ngIf="popularCars">
+  <ng-template *ngFor="let item of popularCars.slice(0, 4)" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <a routerLink="/details/{{item.id}}">
+        <img class="product-header-img" [src]="item.images" alt="Random first slide" />
+      </a>
+    </div>
+    <div class="carousel-caption">
+      <h3>{{item.location}}</h3>
+      <p>{{item.description}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<!--<div class="product-list-wrapper">
+  <h1> Best Choices</h1>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let item of popularCars">
+      <div class="product-item">
+        <img src="{{item.images}}" />
+        <div class="product-details">
+          <h6 class="name-head">{{item.model}}</h6>
+          <div class="product-price">
+            <h6>Lacation:{{item.location}}</h6>
+          </div>
+          <div class="product-price">
+            <h6>Price:{{item.price}}/Day</h6>
+          </div>
+          <div class="product-color">
+            <h6>Price:{{item.price}}</h6>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a routerLink="/details/{{item.id}}"> Details</a>
+          <a routerLink="/details/{{item.id}}">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<div class="product-list-wrapper">
+  <h1> Best Choices</h1>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let item of popularCars">
+      <div class="product-item" [ngClass]="{ 'not-available': isNotAvailable(item.availability) }">
+        <img src="{{item.images}}" />
+        <div class="product-details">
+          <h6 class="name-head">{{item.model}}</h6>
+          <div class="product-price">
+            <h6>Lacation: {{item.location}}</h6>
+          </div>
+          <div class="product-price">
+            <h6>Price: {{item.price}}/Day</h6>
+          </div>
+          <div class="product-color">
+            <h6>Availability: {{item.availability}}</h6>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a routerLink="/details/{{item.id}}">Details</a>
+          <a routerLink="/details/{{item.id}}">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

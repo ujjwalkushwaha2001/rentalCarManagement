@@ -1,0 +1,32 @@
+
+<div *ngIf="bookingConfirm" class="alert alert-success" role="alert">
+   Booking Confirm! 
+</div>
+<div class="row product-details" *ngIf="productData">
+  <div class="col-sm-6">
+    <img class="product-image" src="{{productData.images}}" alt="" />
+  </div>
+  <div class="col-sm-6">
+    <div class="details">
+      <h1>{{productData.model}}</h1>
+      <h3>Price:{{productData.price}}/Day</h3>
+      <div>
+        Color:
+        <h5 [style.backgroundColor]="productData.color" class="product-color"></h5>
+      </div>
+      <h6>Location:{{productData.location}}</h6>
+      <h6>Fuel_Type:{{productData.fuel_Type}}</h6>
+      <h6>Transmission_Type: {{productData.transmission_Type}}</h6>
+      <h6>Description:{{productData.description}}</h6>
+      <button *ngIf="availability" class="form-button" (click)="Booking(productData.id)">Book Now</button>
+      <button  *ngIf="!availability" class="form-button" style="color:red">Not Available</button>
+      <h5>Select Number of Days</h5>
+      <div class="quantity-group">
+        <button (click)="handleQuantity('min')">-</button>
+        <input type="text" value="{{totalDays}}" />
+        <button (click)="handleQuantity('plus')">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+

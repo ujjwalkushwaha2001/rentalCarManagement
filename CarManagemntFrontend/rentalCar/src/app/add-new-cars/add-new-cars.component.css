@@ -1,0 +1,11 @@
+.add-product {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 60px;
+  color: maroon;
+}
+
+  .add-product h1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }

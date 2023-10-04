@@ -1,0 +1,23 @@
+<div class="cart-page">
+<h1>All Bookings </h1>
+<div class="row">
+  <div class="col-sm-12 details">
+    <ul class="order-list">
+      <li *ngFor="let item of bookingList" class="order-item">
+        <div class="order-details">
+          <img src="{{item.images}}" alt="" />
+          <div class="order-info">
+            <p><span>UserName:</span> {{item.name}}</p>
+            <p><span>Model:</span> {{item.model}}</p>
+            <p><span>ToalDays of Booking:</span> {{item.totalDay}}</p>        
+            <p><span>ToalPrice:</span> {{item.totalPrice}}</p>        
+            <button *ngIf="item.returnRequest==1 && item.id" class="button-link" (click)="returnBooking(item.id, item.car_ID)">Requested For Return! Accept it </button>
+            <button *ngIf="item.returnRequest==2" class="accepted-button">Booking Complete! </button>
+            <button *ngIf="item.returnRequest==0 && item.id" class="button-link"  (click)="cancelBooking(item.id,item.car_ID)">Cancel Booking </button>           
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div> 
+</div>
+</div>

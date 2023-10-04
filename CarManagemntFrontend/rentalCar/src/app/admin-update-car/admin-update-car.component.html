@@ -1,0 +1,28 @@
+<div class="update-product">
+  <h1>Update Product</h1>
+  <p class="p_message">{{updateMessage}}</p>
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+    <input class="form-input" type="text" ngModel="{{carData?.model}}" name="model" placeholder="Enter Model Name" />
+    <input class="form-input" type="text" ngModel="{{carData?.color}}" name="color" placeholder="Enter Product Color" />
+    <input class="form-input" type="number" ngModel="{{carData?.mileage}}" name="mileage" placeholder="Enter Mileage/ltr" />
+    <input class="form-input" type="number" ngModel="{{carData?.seating_capacity}}" name="seating_capacity" placeholder="Enter seating Capacity" />
+    <input class="form-input" type="text" ngModel="{{carData?.fuel_Type}}" name="fuel_type" placeholder="Enter FuelType" />
+    <input class="form-input" type="number" ngModel="{{carData?.price}}" name="price" placeholder="Enter Price/day" />
+    <input class="form-input" type="text" ngModel="{{carData?.location}}" name="location" placeholder="Enter Location" />
+    <!--<input class="form-input" type="text" ngModel name="availability" placeholder="Enter Availability" />-->
+    <label style="color: black; ">Select Availability</label>
+    <select class="form-input" type="text" ngModel="{{carData?.availability}}" name="availability" placeholder="Select Availability">
+      <option style="color: black" disabled selected>Select Availability</option>
+      <option>Available</option>
+      <option>Not Available</option>
+    </select>
+    <input class="form-input" type="text" ngModel="{{carData?.transmission_Type}}" name="transmission_type" placeholder="Enter transmission type" />
+    <textarea type="text"
+              class="form-input"
+              placeholder="Enter Description"
+              ngModel="{{carData?.description}}"
+              name="description"></textarea>
+    <input class="form-input" type="text" ngModel="{{carData?.images}}" name="images" placeholder="Enter car's Image URL" />
+    <button class="form-button">Update Product</button>
+  </form>
+</div>

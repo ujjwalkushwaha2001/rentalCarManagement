@@ -1,0 +1,28 @@
+<div class="add-product">
+  <h1>Add New Cars</h1>
+  <p class="p_message">{{addProductMessage}}</p>
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value,addProduct)" class="common-form">
+    <input class="form-input" type="text" ngModel name="model" placeholder="Enter Model Name" />
+    <input class="form-input" type="text" ngModel name="color" placeholder="Enter Product Color" />
+    <input class="form-input" type="number" ngModel name="mileage" placeholder="Enter Mileage/ltr" />
+    <input class="form-input" type="number" ngModel name="seating_capacity" placeholder="Enter seating Capacity" />
+    <input class="form-input" type="text" ngModel name="fuel_type" placeholder="Enter FuelType" />
+    <input class="form-input" type="number" ngModel name="price" placeholder="Enter Price/day" />
+    <input class="form-input" type="text" ngModel name="location" placeholder="Enter Location" />
+    <!--<input class="form-input" type="text" ngModel name="availability" placeholder="Enter Availability" />-->
+    <label style="color: black; ">Select Availability</label>
+    <select class="form-input" type="text" ngModel name="availability" placeholder="Select Availability">
+      <option style="color: black" disabled selected>Select Availability</option>
+      <option>Available</option>
+      <option>Not Available</option>
+    </select>
+    <input class="form-input" type="text" ngModel name="transmission_type" placeholder="Enter transmission type" />
+    <textarea type="text"
+              class="form-input"
+              placeholder="Enter Description"
+              ngModel
+              name="description"></textarea>
+    <input class="form-input" type="text" ngModel name="images" placeholder="Enter car's Image URL" />
+    <button class="form-button">Add Car</button>
+  </form>
+</div>
